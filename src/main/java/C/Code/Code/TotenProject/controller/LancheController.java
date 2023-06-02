@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import C.Code.Code.TotenProject.Model.Lanche;
+import C.Code.Code.TotenProject.exceptions.LancheException;
 import C.Code.Code.TotenProject.service.LancheService;
 
 @RestController
@@ -20,8 +21,18 @@ public class LancheController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Lanche salvar(@RequestBody Lanche lanche) {
-		return lancheService.adicionar(lanche);
+	public String adicionar(@RequestBody Lanche lanche) throws LancheException {
+	    if (lanche.getValor() == null) {
+	        throw new LancheException("O valor do lanche é obrigatório.");
+	    }
+	    
+	    try {
+	        Lanche lancheCriado = lancheService.adicionar(lanche);
+	        return (lancheCriado.getNome() + " com sucesso! <br>Boa cantina!");
+	    } catch (LancheException e) {
+	        throw new LancheException("Erro ao criar lanche: " + e.getMessage(), e);
+	    }
 	}
+
 
 }

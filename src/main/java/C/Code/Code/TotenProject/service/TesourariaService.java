@@ -6,22 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import C.Code.Code.TotenProject.Model.Lanche;
-import C.Code.Code.TotenProject.exceptions.LancheException;
 import C.Code.Code.TotenProject.repository.LancheRepository;
 
 @Service
-public class LancheService {
+public class TesourariaService {
 	
 	@Autowired
 	private LancheRepository lancheRepository;
 	
-	public Lanche adicionar(Lanche lanche) throws LancheException{
-		return lancheRepository.save(lanche);
-	}
-	
-	
-	public List<Lanche> listaCliente(){
+	public List<Lanche> historico() {
 		return lancheRepository.findAll();
 	}
-	
 }

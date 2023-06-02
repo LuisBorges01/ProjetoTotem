@@ -1,6 +1,9 @@
 package C.Code.Code.TotenProject.Model;
 
 import java.io.Serializable;
+import java.util.Date;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,9 +14,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Data
 @Builder
 @Entity 
@@ -29,7 +34,12 @@ public class Lanche implements Serializable{
 	
 	@Column(name = "nome", nullable = false)
 	private String nome;
+	
 	@Column(name = "valor", nullable = false)
 	private Double valor;
+	
+	  @Column(name = "data_venda")
+	  @CreationTimestamp
+	  private Date dataVenda;
 
 }
