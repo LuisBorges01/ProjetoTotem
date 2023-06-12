@@ -1,4 +1,4 @@
-package C.Code.Code.TotenProject.controller;
+package br.ibfac.main.controller;
 
 import java.util.List;
 
@@ -9,11 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import C.Code.Code.TotenProject.Model.Lanche;
-import C.Code.Code.TotenProject.service.TesourariaService;
-
-
-
+import br.ibfac.main.model.Lanche;
+import br.ibfac.main.service.TesourariaService;
 @RestController
 @RequestMapping("/tesouraria")
 public class TesourariaController {
@@ -21,9 +18,16 @@ public class TesourariaController {
 	@Autowired
 	private TesourariaService tesourariaService;
 	
-	@GetMapping
+	/*Relatório de cantinas*/
+	@GetMapping("/historicoCantinas")
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Lanche> historico() {
 		return tesourariaService.historico();
 	}
+	
+	/*
+	 *@PostMapping
+	 * public UserModel criarResponsavel(){}
+	 * */
+	
 }

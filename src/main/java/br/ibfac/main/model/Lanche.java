@@ -1,0 +1,47 @@
+package br.ibfac.main.model;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import br.ibfac.main.abstrat.AbstractId;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder
+@Entity 
+@Table(name = "TB_LANCHE")
+public class Lanche extends AbstractId implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+
+	@Column(name = "CL_NOME", nullable = false)
+	private String clNome ;
+	
+	@Column(name = "CL_VALOR", nullable = false)
+	private Double clValor;
+
+	  @Column(name = "CL_DATA_VENDA")
+	  @CreationTimestamp
+	  private LocalDateTime dataVenda;
+	  
+	@Override
+	public Long getId() {
+		return super.id;
+	}
+
+	@Override
+	public void setId(Long id) {
+		super.id = id;
+	}
+}

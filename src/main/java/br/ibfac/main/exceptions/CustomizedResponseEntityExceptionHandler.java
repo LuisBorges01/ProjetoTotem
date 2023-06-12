@@ -1,4 +1,4 @@
-package C.Code.Code.TotenProject.exceptions;
+package br.ibfac.main.exceptions;
 
 
 import java.util.Date;

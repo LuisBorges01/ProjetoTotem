@@ -1,12 +1,12 @@
-package C.Code.Code.TotenProject.service;
+package br.ibfac.main.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import C.Code.Code.TotenProject.Model.Lanche;
-import C.Code.Code.TotenProject.repository.LancheRepository;
+import br.ibfac.main.model.Lanche;
+import br.ibfac.main.repository.LancheRepository;
 
 @Service
 public class TesourariaService {
@@ -17,4 +17,10 @@ public class TesourariaService {
 	public List<Lanche> historico() {
 		return lancheRepository.findAll();
 	}
+	
+	/*
+	 *public UserModel criarResponsavel{}
+	 *
+	 */
+	
 }

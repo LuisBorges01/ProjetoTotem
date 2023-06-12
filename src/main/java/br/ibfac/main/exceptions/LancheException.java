@@ -1,4 +1,4 @@
-package C.Code.Code.TotenProject.exceptions;
+package br.ibfac.main.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
