@@ -22,7 +22,7 @@ public class HomeController {
 	
 	/*Salvar pedido - SOMENTE CAIXA(ROLE_CAIXA)*/
 	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
+	@ResponseStatus(HttpStatus.CREATED)	
 	public String adicionarPedido(@RequestBody Pedido pedido) throws LancheException {
 		homeService.adicionarPedido(pedido);
         return (pedido.getNome() + " adicionado com sucesso! Boa cantina!");

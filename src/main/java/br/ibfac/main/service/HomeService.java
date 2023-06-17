@@ -30,8 +30,8 @@ public class HomeService {
     /* HomeController
      * Retorno do Nome e Valor 
      * PARA SET NA TELA*/
-	public String informacoesLanche() {
-		lancheRepository.findFirstByOrderByClValorAsc();
+	public String informacoesLanche() {		
+		//lancheRepository.findFirstByOrderByClValorAsc();
 		return lancheRepository.findFirstByOrderByClNomeAsc();
 	}
 	
