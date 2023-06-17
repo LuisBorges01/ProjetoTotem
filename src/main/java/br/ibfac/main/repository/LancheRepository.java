@@ -6,7 +6,4 @@ import br.ibfac.main.model.Lanche;
 
 public interface LancheRepository extends JpaRepository<Lanche, Long>{
 
-	public Double findFirstByOrderByClValorAsc();
-
-	public String findFirstByOrderByClNomeAsc();
 }
