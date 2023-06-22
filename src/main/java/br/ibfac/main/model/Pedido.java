@@ -1,8 +1,6 @@
 package br.ibfac.main.model;
 
-import java.io.Serializable;
-
-import br.ibfac.main.abstrat.AbstractId;
+import br.ibfac.main.commons.AbstractEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -19,30 +17,17 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Builder
-@Entity 
-@Table(name = "TB_PEDIDO")
-public class Pedido extends AbstractId implements Serializable{
+@Entity
+@Table
+public class Pedido extends AbstractEntity {
 
-	private static final long serialVersionUID = 1L;
-
-
-	@Column(name = "CL_NOME", nullable = false)
+	@Column(nullable = false)
 	private String nome;
 	
-	@Column(name = "CL_VALOR", nullable = false)
+	@Column( nullable = false)
 	private Double valor;
 
-	@Column(name = "CL_OBS", nullable = false)
+	@Column(nullable = false)
 	private String observacao;
-	
-	  
-	@Override
-	public Long getId() {
-		return super.id;
-	}
 
-	@Override
-	public void setId(Long id) {
-		super.id = id;
-	}
 }

@@ -1,15 +1,14 @@
 package br.ibfac.main;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import static org.springframework.boot.SpringApplication.run;
 
-@EntityScan(basePackages = "br.ibfac.main.model")
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 @SpringBootApplication
 public class Application {
-	
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+
+  public static void main(String... args) {
+    run(Application.class, args);
+  }
 
 }
