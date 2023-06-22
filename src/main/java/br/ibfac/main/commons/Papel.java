@@ -9,5 +9,4 @@ public enum Papel {
   TESOURARIA,
   RESPONSAVEL,
   CAIXA;
-
 }

@@ -31,7 +31,7 @@ public class HomeService {
      * Retorno do Nome e Valor 
      * PARA SET NA TELA*/
 	public List<Pedido> informacoesLanche() {
-		//lancheRepository.findFirstByOrderByClValorAsc();
+		//lancheRepository.findFirstByOrderByClValorAsc(); 
 		return pedidoRepository.findAll();
 	}
 	
