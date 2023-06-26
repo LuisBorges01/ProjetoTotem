@@ -1,7 +1,8 @@
 package br.ibfac.main.dto;
 
-import br.ibfac.main.model.Lanche;
 import java.time.LocalDateTime;
+
+import br.ibfac.main.model.Lanche;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,12 +17,12 @@ public class LancheDTO {
 	private String nome;
 	private Double valor;
 	private LocalDateTime dataVenda;
+	
 
-	public static Lanche toEntity(LancheDTO lancheDTO) {
-		return Lanche.builder()
-				.nome(lancheDTO.getNome())
-				.valor(lancheDTO.getValor())
-				.dataVenda(lancheDTO.getDataVenda())
-				.build();
-	}
+    public static Lanche toEntity(LancheDTO lancheDTO) {
+        Lanche lanche = new Lanche();
+        lanche.setNome(lancheDTO.getNome());
+        lanche.setValor(lancheDTO.getValor());
+        return lanche;
+    }
 }

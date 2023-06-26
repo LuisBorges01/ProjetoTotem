@@ -20,15 +20,16 @@ public class HomeController {
 	@Autowired
 	private HomeService homeService;
 
-	@PostMapping
+	@PostMapping("/criarPedido")/*OK*/
 	@ResponseStatus(HttpStatus.CREATED)	
 	public String adicionarPedido(@RequestBody Pedido pedido) throws LancheException {
 		homeService.adicionarPedido(pedido);
-        return (pedido.getNome() + " adicionado com sucesso! Boa cantina!");
+	    return (pedido.getNome() + " adicionado com sucesso! Boa cantina!");
 	}
 
+
 	/*Informações para a tela Home*/
-	@GetMapping
+	@GetMapping/*OK*/
 	public List<Pedido> informacoesLanche() {
 		return homeService.informacoesLanche();
 	}

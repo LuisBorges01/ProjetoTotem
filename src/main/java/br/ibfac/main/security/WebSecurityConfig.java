@@ -1,11 +1,8 @@
 package br.ibfac.main.security;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.web.SecurityFilterChain;
-
+//
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+/*
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
@@ -15,9 +12,9 @@ public class WebSecurityConfig {
 
     http.cors().and().csrf().disable()
         .authorizeRequests()
-        .requestMatchers("/users/login/**").permitAll()
-        .anyRequest().authenticated();
-//       .anyRequest().permitAll(); //INFO - Esse trecho vc habilita se quiser testar sem autenticação
+        .anyRequest().permitAll(); //INFO - Esse trecho vc habilita se quiser testar sem autenticação
+//        .requestMatchers("/users/login/**").permitAll()
+//        .anyRequest().authenticated();
 //        .and()
 //        .addFilter(new JwtAuthenticationFilter(authenticationManager()))
 //        .addFilter(new JwtAuthorizationFilter(authenticationManager()));
@@ -33,3 +30,5 @@ public class WebSecurityConfig {
 }
 
 //TODO - só precisa implementar o login para gerar o token e depois mapear aqui um método oara decriptar o token
+*/
+	

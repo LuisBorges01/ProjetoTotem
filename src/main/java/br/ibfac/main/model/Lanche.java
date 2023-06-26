@@ -7,7 +7,9 @@ import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -16,10 +18,14 @@ import org.hibernate.annotations.CreationTimestamp;
 @ToString
 @Builder
 @Entity
+@Getter
+@Setter
 @Table
 public class Lanche extends AbstractEntity {
 
-  @Column(nullable = false)
+  private static final long serialVersionUID = 1L;
+
+@Column(nullable = false)
   private String nome;
 
   @Column(nullable = false)

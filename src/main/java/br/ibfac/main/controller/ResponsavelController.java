@@ -23,7 +23,7 @@ public class ResponsavelController {
 	
 	
 	/*Salvar pedido - SOMENTE RESPONSÁVEL(ROLE_RESPONSAVEL)*/
-	@PostMapping
+	@PostMapping("/adicionar") /*OK*/
 	@ResponseStatus(HttpStatus.CREATED)
 	public String adicionar(@RequestBody LancheDTO lancheDTO) throws LancheException {
 		Lanche lanche = LancheDTO.toEntity(lancheDTO);
@@ -33,7 +33,7 @@ public class ResponsavelController {
 	
     /*Valor Total Cantina(Botão) - MÉTODO EM ANÁLISE 
      *SOMENTE RESPONSÁVEL(ROLE_RESPONSAVEL)*/
-	@GetMapping("/totalValores")
+	@GetMapping("/totalValores")/*OK*/
 	public Double totalCantina() {
 		responsavelService.setCantinaFinalzada(true);
 		return responsavelService.totalCantina();
