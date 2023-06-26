@@ -1,6 +1,15 @@
 package br.ibfac.main.security;
 
+<<<<<<< HEAD
 /*
+=======
+import java.util.Date;
+
+import br.ibfac.main.exceptions.LancheException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+>>>>>>> 21ac4c9cc4dd408e36a38f1368813242aba74505
 public class JwtTokenProvider {
 
     private static final String SECRET_KEY = "sua_chave_secreta";
@@ -29,4 +38,8 @@ public class JwtTokenProvider {
 	        throw new LancheException("Erro ao validar token(JwtTokenProvider): " + e.getMessage(), e);
         }
     }
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> 21ac4c9cc4dd408e36a38f1368813242aba74505

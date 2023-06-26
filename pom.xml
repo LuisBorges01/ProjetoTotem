@@ -70,6 +70,40 @@
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
     </dependency>
+<<<<<<< HEAD
+=======
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+     <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-api</artifactId>
+        <version>0.11.2</version>
+    </dependency>
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-impl</artifactId>
+        <version>0.11.2</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-jackson</artifactId>
+        <version>0.11.2</version>
+        <scope>runtime</scope>
+    </dependency>
+        <dependency>
+        <groupId>org.auth0</groupId>
+        <artifactId>java-jwt</artifactId>
+        <version>3.16.0</version>
+    </dependency>
+    <dependency>
+	    <groupId>io.jsonwebtoken</groupId>
+	    <artifactId>jjwt</artifactId>
+	    <version>0.7.0</version>
+	</dependency>
+>>>>>>> 21ac4c9cc4dd408e36a38f1368813242aba74505
   </dependencies>
 
   <build>

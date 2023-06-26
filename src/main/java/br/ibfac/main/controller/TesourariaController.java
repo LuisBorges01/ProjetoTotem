@@ -25,7 +25,11 @@ public class TesourariaController {
 	
 	/*Relatório de cantinas*/
 	@GetMapping("/historicoCasntinas")
+<<<<<<< HEAD
 	@ResponseStatus(HttpStatus.OK)/*OK*/
+=======
+	@ResponseStatus(HttpStatus.OK)
+>>>>>>> 21ac4c9cc4dd408e36a38f1368813242aba74505
 	public List<Lanche> historico() {
 		return tesourariaService.historico();
 	}

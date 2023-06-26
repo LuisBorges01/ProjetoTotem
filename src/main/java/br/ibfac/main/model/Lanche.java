@@ -18,6 +18,7 @@ import org.hibernate.annotations.CreationTimestamp;
 @ToString
 @Builder
 @Entity
+<<<<<<< HEAD
 @Getter
 @Setter
 @Table
@@ -34,4 +35,18 @@ public class Lanche extends AbstractEntity {
   @CreationTimestamp
   private LocalDateTime dataVenda;
 
+=======
+@Table
+public class Lanche extends AbstractEntity {
+
+  @Column(nullable = false)
+  private String nome;
+
+  @Column(nullable = false)
+  private Double valor;
+
+  @CreationTimestamp
+  private LocalDateTime dataVenda;
+
+>>>>>>> 21ac4c9cc4dd408e36a38f1368813242aba74505
 }
